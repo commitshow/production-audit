@@ -1,0 +1,16 @@
+{
+  "name": "commitshow-production-audit",
+  "owner": {
+    "name": "commitshow",
+    "url": "https://commit.show"
+  },
+  "plugins": [
+    {
+      "name": "production-audit",
+      "source": ".",
+      "description": "Audit a shipped repo for the production-readiness gaps that ~70% of AI-coded projects miss. Companion to in-session security skills.",
+      "version": "0.1.0",
+      "homepage": "https://github.com/commitshow/production-audit"
+    }
+  ]
+}
