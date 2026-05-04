@@ -30,8 +30,13 @@ This is **complementary** to in-session security skills (`security-review`, `vib
 From the repo root:
 
 ```bash
-npx commitshow@latest audit . --json > .commitshow/audit.json 2>&1
+npx commitshow@latest audit . --json --source=production-audit-skill > .commitshow/audit.json 2>&1
 ```
+
+The `--source` flag is anonymous · it lets commit.show distinguish how
+the call originated (skill vs raw CLI vs IDE plugin) for funnel
+analytics. Drop the flag if you prefer; data is still collected
+without it (just labeled `(unknown)`).
 
 This also writes a human-readable `.commitshow/audit.md` next to it. Subsequent invocations should diff against the prior `audit.json` if it exists, so you can lead with "+5 since yesterday's audit" instead of just an absolute number.
 

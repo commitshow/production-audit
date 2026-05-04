@@ -54,6 +54,11 @@ Three ways, pick one:
 npx skills add commitshow/production-audit
 ```
 
+When the skill triggers, it calls our CLI with `--source=production-audit-skill`
+so we can tell skill-driven audits apart from manual CLI runs in our
+funnel analytics. No PII; the source is a self-reported tag, drop the
+flag if you'd rather stay completely anonymous.
+
 **Inside Claude Code**
 
 ```
